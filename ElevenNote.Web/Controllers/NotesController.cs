@@ -81,7 +81,7 @@ namespace ElevenNote.Web.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
-            if (!_svc.Value.GetNoteById(int id); // TODO: verify this is right
+            if (!_svc.Value.UpdateNote(model))
             {     
                 ModelState.AddModelError("", "Unable to update note");
                 return View(model);
